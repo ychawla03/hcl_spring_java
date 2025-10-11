@@ -1,0 +1,163 @@
+isEmpty() vs isBlank()
+
+Given:
+
+String a = " ";
+
+Hint: " " has length > 0 ⇒ not empty; all whitespace ⇒ blank.
+
+answer choices
+a.isEmpty() → true, a.isBlank() → false
+
+a.isEmpty() → false, a.isBlank() → true
+
+Both true
+
+Both false
+
+2. Multiple Choice
+45 seconds
+1 point
+What is the return type of subSequence(int, int) and substring(int, int)?
+
+answer choices
+Both return CharSequence
+
+Both return String
+
+subSequence → CharSequence, substring → String
+
+subSequence → StringBuilder, substring → String
+
+3. Multiple Choice
+45 seconds
+1 point
+What does this print?
+
+System.out.println("a.b.c".replace(".", "#"));
+
+System.out.println("a.b.c".replaceAll(".", "#"));
+
+Hint: replace treats the first arg as a literal; replaceAll uses regex—. matches any char.
+
+answer choices
+a#b#c and a#b#c
+
+a#b#c and ###
+
+### and a#b#c
+
+Both ###
+
+4. Multiple Choice
+45 seconds
+1 point
+String.valueOf vs toString on null
+Which is true?
+
+Hint: valueOf(Object) returns "null" for null; calling toString() on a null reference throws NPE.
+
+answer choices
+String.valueOf((Object) null) returns "null"
+
+((Object) null).toString() returns "null"
+
+Objects.toString(null) throws NullPointerException
+
+5. Multiple Choice
+45 seconds
+1 point
+What does this print?
+
+System.out.println(Arrays.toString("a:b:c".split(":", 2)));
+
+Hint: With limit 2, split once ⇒ first token + remainder unsplit.
+
+answer choices
+[a, b, c]
+
+[a, b:c]
+
+[a:b, c]
+
+[a::b:c]
+
+6. Multiple Choice
+45 seconds
+1 point
+Try-with-resources close order
+Given:
+
+try (A a = new A(); B b = new B()) { /* ... */ }
+
+A and B implement AutoCloseable. In what order are resources closed?
+
+answer choices
+A then B
+
+B then A
+
+Unspecified
+
+Only the last one is closed if no exception
+
+7. Multiple Choice
+45 seconds
+1 point
+ALTER TABLE add a column with default
+Add column active BOOLEAN default TRUE:
+
+answer choices
+ALTER TABLE emp ADD COLUMN active BOOLEAN DEFAULT TRUE;
+
+ALTER TABLE emp ADD active BOOLEAN SET DEFAULT TRUE;
+
+ALTER emp ADD COLUMN active BOOLEAN = TRUE;
+
+UPDATE emp ADD COLUMN active BOOLEAN DEFAULT TRUE;
+
+8. Multiple Choice
+45 seconds
+1 point
+TRUNCATE vs DELETE
+Which is true for TRUNCATE TABLE orders;?
+
+answer choices
+It removes rows one-by-one and fires row triggers.
+
+It is DDL, usually faster, and often cannot be rolled back without a transaction.
+
+It preserves the auto-increment/identity counter.
+
+It requires a WHERE clause.
+
+9. Multiple Choice
+45 seconds
+1 point
+DROP TABLE with dependency
+What happens with DROP TABLE parent; when child(parent_id) has FK to parent(id)?
+
+answer choices
+Always succeeds and keeps the FK.
+
+Fails unless you drop the FK or use CASCADE (DB-specific).
+
+Converts the FK to a check constraint automatically.
+
+Succeeds but nulls all child.parent_id.
+
+10. Multiple Choice
+30 seconds
+1 point
+What is not allowed inside a lambda regarding captured local variables?
+
+Hint: Lambdas can capture only final or effectively final locals. You can’t reassign a captured local variable inside the lambda.
+
+answer choices
+Reading a local variable declared outside the lambda
+
+Using a final local variable from the enclosing method
+
+Using an effectively final local variable (never reassigned)
+
+Modifying (reassigning) a captured local variable from the enclosing method
